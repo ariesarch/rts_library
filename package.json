@@ -6,12 +6,12 @@
   "files": [
     "dist"
   ],
-  "main": "dist/simple-ui-umd.cjs",
-  "module": "dist/simple-ui.js",
+  "main": "dist/rts-library-umd.cjs",
+  "module": "dist/rts-library.js",
   "exports": {
     ".": {
-      "import": "./dist/simple-ui.js",
-      "require": "./dist/simple-ui-umd.cjs"
+      "import": "./dist/rts-library.js",
+      "require": "./dist/rts-library-umd.cjs"
     }
   },
   "scripts": {
