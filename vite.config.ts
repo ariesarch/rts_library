@@ -13,8 +13,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "./src/components/index.tsx"),
-      name: "SimpleUI",
-      fileName: "simple-ui",
+      name: "rts-library",
+      fileName: "rts-library",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
