@@ -1,10 +1,9 @@
-import { cva, VariantProps } from "class-variance-authority"
-import { useState } from "react"
-import { PRadio } from "../PRadio"
+import { useState } from "react";
+import { PRadio } from "../PRadio";
 
-const accordionStyles = cva(["w-full"])
-type PAccordionProps = VariantProps<typeof accordionStyles>
-export const PAccordion = ({ ...props }: PAccordionProps) => {
+// const accordionStyles = cva(["w-full"])
+// type PAccordionProps = VariantProps<typeof accordionStyles>
+export const PAccordion = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div className="relative cursor-pointer w-full">

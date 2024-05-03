@@ -3024,7 +3024,11 @@ const Xe = (r) => typeof r == "boolean" ? "".concat(r) : r === 0 ? "0" : r, He =
   return He(r, l, b, o == null ? void 0 : o.class, o == null ? void 0 : o.className);
 }, yt = ht(
   [
-    "text-blue-500"
+    "w-full",
+    "rounded-md",
+    "font-semibold",
+    "focus:outline-none",
+    "disabled:cursor-not-allowed"
   ],
   {
     variants: {

@@ -1,5 +1,6 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
+import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
@@ -26,15 +27,15 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          // tailwindcss: "tailwindcss",
+          tailwindcss: "tailwindcss",
         },
       },
     },
   },
   plugins: [react(), dts({ rollupTypes: true })],
-  // css: {
-  //   postcss: {
-  //     plugins: [tailwindcss],
-  //   },
-  // },
+  css: {
+    postcss: {
+      plugins: [tailwindcss],
+    },
+  },
 });
