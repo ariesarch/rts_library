@@ -3067,5 +3067,5 @@ const Xe = (r) => typeof r == "boolean" ? "".concat(r) : r === 0 ? "0" : r, He =
   }
 ), wt = zr(({ variant: r, size: t, colorschema: o, className: a, ...c }, s) => /* @__PURE__ */ Fr.jsx("button", { ref: s, className: mt(yt({ variant: r, size: t, colorschema: o, className: a })), ...c }));
 export {
-  wt as Button
+  wt as PButton
 };
