@@ -13,7 +13,9 @@
       "import": "./dist/rts-library.js",
       "require": "./dist/rts-library-umd.cjs"
     },
-    "./dist/style.scss": "./dist/style.css"
+    "./dist/style.scss": {
+      "import": "./dist/style.css"
+    }
   },
   "scripts": {
     "build": "tsc && vite build",
