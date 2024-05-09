@@ -1,7 +1,6 @@
 import { ClassProp } from 'class-variance-authority/types';
 import { ComponentProps } from 'react';
 import { ForwardRefExoticComponent } from 'react';
-import { JSX as JSX_2 } from 'react/jsx-runtime';
 import { RefAttributes } from 'react';
 import { VariantProps } from 'class-variance-authority';
 
@@ -15,7 +14,7 @@ export declare const PButton: ForwardRefExoticComponent<Omit<PButtonProps, "ref"
 
 declare type PButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
 
-export declare const PRadio: ({ variant, size, ...props }: PRadioProps) => JSX_2.Element;
+export declare const PRadio: ForwardRefExoticComponent<Omit<PRadioProps, "ref"> & RefAttributes<HTMLInputElement>>;
 
 declare type PRadioProps = ComponentProps<"input"> & VariantProps<typeof radioStyles>;
 

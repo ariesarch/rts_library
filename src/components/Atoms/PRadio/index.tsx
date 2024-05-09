@@ -1,6 +1,6 @@
 import { cn } from "@/utils"
 import { cva, VariantProps } from "class-variance-authority"
-import { ComponentProps } from "react"
+import { ComponentProps, forwardRef } from "react"
 
 const radioStyles = cva([
     "cursor-pointer",
@@ -25,6 +25,9 @@ const radioStyles = cva([
     }
 )
 type PRadioProps = ComponentProps<"input"> & VariantProps<typeof radioStyles>
-export const PRadio = ({ variant, size, ...props }: PRadioProps) => {
-    return <input type="radio" {...props} className={cn(radioStyles({ variant, size }))} disabled={variant === "readonly"} />
-}
+// export const PRadio = ({ variant, size, ...props }: PRadioProps) => {
+//     return <input type="radio" {...props} className={cn(radioStyles({ variant, size }))} disabled={variant === "readonly"} />
+// }
+export const PRadio = forwardRef<HTMLInputElement, PRadioProps>(({ variant, size, ...props }, ref) => {
+    return <input ref={ref} type="radio" {...props} className={cn(radioStyles({ variant, size }))} disabled={variant === "readonly"} />
+})
