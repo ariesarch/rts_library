@@ -4,7 +4,11 @@ import { ComponentProps, forwardRef } from "react";
 
 
 const buttonStyles = cva([
-    "text-blue-500"
+    "w-full",
+    "rounded-md",
+    "font-semibold",
+    "focus:outline-none",
+    "disabled:cursor-not-allowed",
 ],
     {
         variants: {
@@ -45,11 +49,11 @@ const buttonStyles = cva([
             colorschema: "primary"
         }
     });
-type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>
+type PButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>
 
-// export const Button = ({ variant, size, colorschema, className, ...props }: ButtonProps) => {
+// export const Button = ({ variant, size, colorschema, className, ...props }: PButtonProps) => {
 //     return <button className={cn(buttonStyles({ variant, size, colorschema, className }))} {...props} />;
 // }
-export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({ variant, size, colorschema, className, ...props }, ref) => {
+export const PButton = forwardRef<HTMLButtonElement, PButtonProps>(({ variant, size, colorschema, className, ...props }, ref) => {
     return <button ref={ref} className={cn(buttonStyles({ variant, size, colorschema, className }))} {...props} />;
 });

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from ".";
+import { PButton } from ".";
 
-const meta: Meta<typeof Button> = {
-    title: 'Component/Button',
-    component: Button,
+const meta: Meta<typeof PButton> = {
+    title: 'Component/PButton',
+    component: PButton,
     parameters: {
         layout: 'centered'
     },
