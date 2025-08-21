@@ -31,4 +31,4 @@ type PRadioProps = ComponentProps<"input"> & VariantProps<typeof radioStyles>
 export const PRadio = forwardRef<HTMLInputElement, PRadioProps>(({ variant, size, ...props }, ref) => {
     return <input ref={ref} type="radio" {...props} className={cn(radioStyles({ variant, size }))} disabled={variant === "readonly"} />
 })
-// tet radio com
+// tet radio component
